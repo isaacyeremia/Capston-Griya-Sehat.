@@ -1,11 +1,13 @@
-<footer class="footer">
+<footer class="footer mt-auto">
   <div class="footer-top container">
     <div class="footer-cols">
 
       <div class="footer-col">
         <h5>Griya Sehat</h5>
         <p class="muted">
-          Pelayanan Kesehatan Tradisional Interkontinental dan Pengobatan Tradisional Indonesia.
+          Pelayanan Kesehatan Tradisional Interkontinental dan Pengobatan
+          Tradisional Indonesia Melayani: Akupunktur, Herbal TCM/Indonesia,
+          Kop/Bekam, Kerokan/GuaSha, Pijat/Tuina.
         </p>
         <div class="social-badges">
           <span>IG</span>
@@ -37,8 +39,8 @@
         <h6>Kontak</h6>
         <p class="muted">
           📞 0822-2772-2234<br>
-          📍 Jl. Dr. Ir. H. Soekarno No.201b<br>
-          Klampis Ngasem, Surabaya
+          📍 Jl. Dr. Ir. H. Soekarno No.201b, Klampis Ngasem,
+          Kec. Sukolilo, Surabaya
         </p>
       </div>
 
