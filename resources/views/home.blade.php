@@ -16,9 +16,13 @@
       </div>
 
       <div class="hero-right">
-        <div class="hero-card">
-          <div>Gambar Dokter / Medical Illustration</div>
-        </div>
+      <div class="hero-card">
+        <img 
+          src="{{ asset('images/CISAT-traditional-chinese-medicine5.jpg') }}"
+          alt="Dokter Griya Sehat"
+          style="width:100%;height:100%;object-fit:contain;"
+        >
+      </div>
       </div>
     </div>
   </div>
@@ -31,16 +35,20 @@
 
     <div class="services-row" style="margin-top:36px;">
       <div class="service-card">
-        <div class="icon">💊</div>
+        <div class="icon">🩺</div>
         <h5>Konsultasi</h5>
         <p class="text-muted small">Konsultasi dengan dokter profesional secara online maupun offline.</p>
       </div>
 
       <div class="service-card">
-        <div class="icon">🛒</div>
-        <h5>Toko Online</h5>
-        <p class="text-muted small">Beli obat dan produk kesehatan dengan mudah dan aman.</p>
-      </div>
+        <div class="icon">
+          📇
+        </div>
+          <h5>Katalog Apotek</h5>
+          <p>
+            Lihat daftar obat dan produk kesehatan yang tersedia di Griya Sehat.
+          </p>
+        </div>
 
       <div class="service-card">
         <div class="icon">📅</div>
@@ -61,9 +69,20 @@
       </div>
     </div>
 
-    <div class="about-right">
-      <div class="about-card">Gambar Fasilitas Kesehatan</div>
-    </div>
+<div class="about-right">
+  <div class="about-card">
+    <div id="fasilitasCarousel" class="carousel slide h-100" data-bs-ride="carousel">
+      <div class="carousel-inner h-100">
+
+        <div class="carousel-item active h-100">
+          <img
+            src="{{ asset('images/fasilitas 1.jpg') }}"
+            class="d-block w-100 h-100"
+            style="object-fit:cover; border-radius:12px;"
+            alt="Fasilitas Terapi"
+          >
+        </div>
+
   </div>
 </section>
 

@@ -6,7 +6,7 @@
 <div class="section">
   <div class="container">
 
-    <h2 class="text-center fw-bold mb-2">Apotek Online</h2>
+    <h2 class="text-center fw-bold mb-2">Katalog Apotek</h2>
     <p class="text-center text-muted mb-4">
       Beli obat dan produk kesehatan dengan mudah dan aman
     </p>

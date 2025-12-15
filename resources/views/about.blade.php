@@ -35,7 +35,7 @@
 
     <div class="about-right">
       <div class="about-card">
-        <img src="{{ asset('images/fasilitas.jpg') }}"
+        <img src="{{ asset('images/fasilitas 2.jpg') }}"
              alt="Fasilitas Griya Sehat"
              style="width:100%;height:100%;object-fit:cover;">
       </div>

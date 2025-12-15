@@ -26,7 +26,7 @@
       <div class="nav-menu">
         <a href="{{ url('/home') }}">Beranda</a>
         <a href="{{ route('profile') }}">Profile</a>
-        <a href="{{ route('apotek.index') }}">Apotek</a>
+        <a href="{{ route('apotek.index') }}">Katalog</a>
         <a href="#">Layanan</a>
         <a href="#">Kontak</a>
       </div>
