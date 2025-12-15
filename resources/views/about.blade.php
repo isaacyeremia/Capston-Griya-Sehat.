@@ -3,88 +3,165 @@
 @section('title','Tentang Griya Sehat')
 
 @section('content')
-<!-- small hero / breadcrumb-like -->
-<section class="hero-outer" style="padding:40px 0 40px 0;">
+
+<!-- HERO -->
+<section class="hero-outer" style="padding:50px 0;">
   <div class="hero-inner text-center">
-    <h1 style="font-size:34px; font-weight:800; margin:0 0 8px 0; color:#fff">Tentang Griya Sehat</h1>
-    <p style="color:rgba(255,255,255,0.9); max-width:900px; margin:8px auto 0;">
-      Klinik Kesehatan Akupunktur, Pengobatan Herbal, Kop/Bekam, Kerokan, Pijat/Tuina.
+    <h1 class="fw-bold text-white">Tentang Griya Sehat</h1>
+    <p class="text-white-75">
+      Klinik Kesehatan Akupunktur & Pengobatan Tradisional
     </p>
   </div>
 </section>
 
-<!-- content: about text + image -->
+<!-- ABOUT -->
 <section class="about-section">
-  <div class="about-inner" style="max-width:1100px; margin:0 auto;">
+  <div class="about-inner">
     <div class="about-left">
-      <h3 style="font-weight:800; font-size:28px; margin-bottom:14px;">Tentang Griya Sehat</h3>
-      <p style="color:var(--muted); line-height:1.8;">
-        Klinik Kesehatan Akupunktur, Pengobatan Herbal, Kop/Bekam, Kerokan/GuaSha, Pijat/Tuina.
-        Dengan tim dokter spesialis dan fasilitas lengkap, kami berkomitmen memberikan pelayanan kesehatan terpadu yang mudah diakses oleh seluruh masyarakat.
+      <h3 class="fw-bold mb-3">Tentang Griya Sehat</h3>
+      <p class="text-muted">
+        Klinik Kesehatan Akupunktur, Pengobatan Herbal, Kop/Bekam, Kerokan/GuaSha,
+        dan Pijat/Tuina. Kami didukung oleh tenaga medis profesional dengan
+        pendekatan tradisional dan modern.
       </p>
 
-      <ul style="color:var(--muted); margin-top:18px; line-height:1.8;">
-        <li>Pelayanan Akupunktur & Terapi Tradisional</li>
+      <ul class="text-muted">
+        <li>Akupunktur & Terapi Tradisional</li>
         <li>Pengobatan Herbal & Konsultasi</li>
-        <li>Pelayanan Kop/Bekam, Kerokan, Pijat/Tuina</li>
-        <li>Jadwal praktek fleksibel sesuai kebutuhan pasien</li>
+        <li>Kop/Bekam, Kerokan, Pijat/Tuina</li>
+        <li>Jadwal praktik fleksibel</li>
       </ul>
-
+    </div>
 
     <div class="about-right">
       <div class="about-card">
-        <!-- ganti asset jika punya gambar -->
-        <img src="{{ asset('images/fasilitas.jpg') }}" alt="Fasilitas" style="width:100%;height:100%;object-fit:cover;border-radius:12px;">
+        <img src="{{ asset('images/fasilitas.jpg') }}"
+             alt="Fasilitas Griya Sehat"
+             style="width:100%;height:100%;object-fit:cover;">
       </div>
     </div>
   </div>
 </section>
 
-<!-- tenaga medis / cards -->
-<section class="section" style="padding-top:10px;">
-  <div class="container text-center">
-    <h3 style="font-weight:700;">Tenaga Medis</h3>
-    <p style="color:var(--muted); margin-bottom:18px;">Tim dokter profesional kami yang melayani berbagai kebutuhan.</p>
+<!-- TENAGA MEDIS -->
+<section class="section">
+  <div class="container">
+    <h2 class="text-center fw-bold mb-1">Tenaga Medis</h2>
+    <p class="text-center text-muted mb-5">Jadwal & Harga Praktisi</p>
 
-    <div class="services-row" style="justify-content:center; gap:20px; flex-wrap:wrap;">
-      <!-- Card 1 -->
-      <div class="service-card" style="max-width:260px;">
-        <div style="height:120px; display:flex; align-items:center; justify-content:center; color:#7a4b36;">Foto Tenaga Medis</div>
-        <h5 style="margin-top:8px;">Dr. A. Contoh</h5>
-        <p class="text-muted small">Jadwal Praktek</p>
-      </div>
+    <div class="row g-4">
 
-      <!-- Card 2 -->
-      <div class="service-card" style="max-width:260px;">
-        <div style="height:120px; display:flex; align-items:center; justify-content:center; color:#7a4b36;">Foto Tenaga Medis</div>
-        <h5 style="margin-top:8px;">Dr. B. Contoh</h5>
-        <p class="text-muted small">Jadwal Praktek</p>
-      </div>
+      @php
+        $doctors = [
+          [
+            'foto'=>'suryawan.jpg',
+            'nama'=>'Suryawan, SE., B.Med., M.Med.',
+            'jadwal'=>'Senin – Jumat | 08.30 – 13.00',
+            'harga'=>[
+              'Pengobatan Tradisional Interkontinental Rp200.000 (tidak termasuk herbal)',
+              'Pendaftaran Rp50.000'
+            ]
+          ],
+          [
+            'foto'=>'catty.jpg',
+            'nama'=>'Catty Santoso, B.Med',
+            'jadwal'=>'Jumat | 13.00 – 17.00',
+            'harga'=>[
+              'Pendaftaran Rp50.000',
+              'Akupuntur Biasa (20–30 menit) Rp175.000',
+              'Akupuntur Kilat (5–10 menit) Rp50.000 / keluhan',
+              'Akupuntur Mengeluarkan Darah Rp100.000',
+              'Kop Tinggal Rp50.000',
+              'Kop Kilat Rp50.000',
+              'Kop Jalan Rp100.000',
+              'Kop Mengeluarkan Darah Rp150.000'
+            ]
+          ],
+          [
+            'foto'=>'retnawati.jpg',
+            'nama'=>'Retnawati, B.Med., B.Ed',
+            'jadwal'=>'Selasa & Kamis | 13.00 – 18.00',
+            'harga'=>[
+              'Akupuntur Rp175.000',
+              'Akupuntur Cepat Rp50.000',
+              'Kop Jalan Rp50.000',
+              'Kop Tinggal Rp50.000',
+              'Kop Lengkap Rp100.000',
+              'Konsultasi + Resep Rp50.000',
+              'Pendaftaran Rp25.000'
+            ]
+          ],
+          [
+            'foto'=>'alfredo.jpg',
+            'nama'=>'Alfredo Aldo E. P. Tjundawan, B.Med., M.MED.',
+            'jadwal'=>'Senin 08.00–13.00 | Rabu & Jumat 18.00–21.00',
+            'harga'=>[
+              'Pendaftaran Rp50.000',
+              'Akupuntur Biasa Rp175.000',
+              'Akupuntur Kilat Rp50.000 / keluhan',
+              'Akupuntur Mengeluarkan Darah Rp100.000',
+              'Kop Tinggal Rp50.000',
+              'Kop Kilat Rp50.000',
+              'Kop Jalan Rp100.000',
+              'Kop Mengeluarkan Darah Rp150.000'
+            ]
+          ],
+          [
+            'foto'=>'impian.jpg',
+            'nama'=>'Impian Delillah Jazmine, S.Tr.Battra',
+            'jadwal'=>'Selasa & Kamis | 18.00 – 21.00',
+            'harga'=>[
+              'Totok Wajah (25 menit) Rp75.000',
+              'Pengobatan Tradisional Lengkap Rp150.000',
+              'Kop Rp100.000',
+              'Pendaftaran Rp25.000'
+            ]
+          ],
+          [
+            'foto'=>'fadilla.jpg',
+            'nama'=>'Fadilla Ilmi Zarkasi, S.Tr.Battra',
+            'jadwal'=>'Selasa & Jumat | 18.00 – 21.00',
+            'harga'=>[
+              'Pengobatan Tradisional Rp150.000',
+              'Pengobatan Tradisional Khusus ABK Rp125.000',
+              'Kop Rp50.000 / bagian',
+              'Pendaftaran Rp25.000'
+            ]
+          ],
+        ];
+      @endphp
 
-      <!-- Card 3 -->
-      <div class="service-card" style="max-width:260px;">
-        <div style="height:120px; display:flex; align-items:center; justify-content:center; color:#7a4b36;">Foto Tenaga Medis</div>
-        <h5 style="margin-top:8px;">Dr. C. Contoh</h5>
-        <p class="text-muted small">Jadwal Praktek</p>
+      @foreach($doctors as $d)
+      <div class="col-md-6 col-lg-4">
+        <div class="card h-100 p-4 text-center">
+          <img src="{{ asset('images/tenaga-medis/'.$d['foto']) }}"
+               class="rounded-circle mx-auto mb-3"
+               style="width:110px;height:110px;object-fit:cover;">
+          <h6 class="fw-bold">{{ $d['nama'] }}</h6>
+          <p class="text-muted small">{{ $d['jadwal'] }}</p>
+          <ul class="small text-start">
+            @foreach($d['harga'] as $h)
+              <li>{{ $h }}</li>
+            @endforeach
+          </ul>
+        </div>
       </div>
+      @endforeach
+
     </div>
   </div>
 </section>
 
-<!-- maps / alamat -->
-<section class="section" style="padding-top:18px; padding-bottom:40px;">
+<!-- MAP -->
+<section class="section">
   <div class="container text-center">
-    <h4 style="font-weight:700; margin-bottom:14px;">Lokasi Kami</h4>
-
+    <h4 class="fw-bold mb-3">Lokasi Kami</h4>
     <div class="map-wrapper">
-      <iframe
-        class="map-embed"
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3957.553452129015!2d112.77869567377716!3d-7.291537671667388!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd7fb001a1b8231%3A0x94ea12288f33fa52!2sGriya%20Sehat%20UKDC!5e0!3m2!1sid!2sid!4v1764408465347!5m2!1sid!2sid"
-        allowfullscreen=""
-        loading="lazy"
-        referrerpolicy="no-referrer-when-downgrade">
-      </iframe>
+      <iframe class="map-embed"
+        src="https://www.google.com/maps?q=Griya+Sehat+UKDC&output=embed"
+        loading="lazy"></iframe>
     </div>
   </div>
 </section>
+
 @endsection
