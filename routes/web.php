@@ -2,6 +2,9 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\ApotekController;
+use App\Http\Controllers\ProfileController;
+
 
 Route::get('/', function () {
     return redirect('/login');
@@ -23,3 +26,10 @@ Route::get('/home', function () {
 Route::get('/about', function () {
     return view('about');
 })->name('about');
+
+Route::get('/apotek', [ApotekController::class, 'index'])->name('apotek.index');
+
+Route::middleware('auth')->group(function () {
+    Route::get('/profile', [ProfileController::class, 'index'])->name('profile');
+    Route::post('/profile/update', [ProfileController::class, 'update'])->name('profile.update');
+});
